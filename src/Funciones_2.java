@@ -5,6 +5,11 @@ public class Funciones_2{
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
 
+        //MENU
+
+        System.out.println("Muy buenas DIAS/TARDES que desea hacer:");
+        MENU();
+
         //SUMA
 
         System.out.println("Buenos dias dijite porfavor un numero: ");
@@ -40,7 +45,8 @@ public class Funciones_2{
         System.out.println("Numero: ");
         int Num = leer.nextInt();
         int Sex = 1;
-        System.out.println("El factorial de: "+Num+ " Es: "+Factorial(Num,Sex));
+        int Fac = Num-1;
+        System.out.println("El factorial de: "+Num+ " Es: "+Factorial(Num,Sex,Fac));
 
         //AREA DE UN CUADRADO
 
@@ -105,10 +111,10 @@ public class Funciones_2{
 
     //FACTORIAL
 
-    public static int Factorial(int Num,int Sex){
+    public static int Factorial(int Num,int Sex,int Fac){
         for(int i=1;i<Num;i++){
-            Sex = Sex*Sex;
-            Sex++;
+            Sex = (Num*(Fac));
+
         }
         return Sex;
     }
@@ -149,5 +155,21 @@ public class Funciones_2{
         }
         System.out.println();
     }
+
+    //FUNCION MENU
+
+    public static void MENU() {
+        System.out.println(" 1. Sumar 2 numeros\n" +
+                "    2. Multiplicar 2 numeros con las sumas del 1\n" +
+                "    3. Potenciar 2 numeros con las sumas del 1\n" +
+                "    4. Calcular el factorial de 1 numero\n" +
+                "    5. Calcular el area de un cuadrado(recibiendo un lado)\n" +
+                "    6. Calcular el area de un circulo(recibiendo el radio)\n" +
+                "    7. Calcular el volumen de un cono(recibiendo el radio y la altura\n" +
+                "    8. Mostrar los n numeros de la serie de fibonacci(recibiendo n)\n");
+    }
+
+
+
 
 }
