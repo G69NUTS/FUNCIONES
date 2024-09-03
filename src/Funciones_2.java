@@ -9,80 +9,81 @@ public class Funciones_2{
 
         System.out.println("Muy buenas DIAS/TARDES que desea hacer:");
         MENU();
+        System.out.println("Dijita tu opcion: ");
+        int Respuesta = leer.nextInt();
 
         //SUMA
-
-        System.out.println("Buenos dias dijite porfavor un numero: ");
-        System.out.println("Numero 1:");
-        int num_1 = leer.nextInt();
-        System.out.println("Numero 2:");
-        int num_2 = leer.nextInt();
-        System.out.println("La suma de los numeros es: "+Suma(num_1,num_2));
-
+        if(Respuesta==1) {
+            System.out.println("Buenos dias dijite porfavor los numeros: ");
+            System.out.println("Numero 1:");
+            int num_1 = leer.nextInt();
+            System.out.println("Numero 2:");
+            int num_2 = leer.nextInt();
+            System.out.println("La suma de los numeros es: " + Suma(num_1, num_2));
+        }
         //MULTIPLICACION
-
-        System.out.println("Dijite dos numeros para multiplicar");
-        System.out.println("Numero 1");
-        int Mul = leer.nextInt();
-        System.out.println("Numero 2");
-        int Por = leer.nextInt();
-        int Res = 0;
-        System.out.println("La multiplicacion de: " +Mul+ " por: " +Por+ " Es: "+Multiplicacion(Mul, Por,Res));
-
+        if(Respuesta==2) {
+            System.out.println("Dijite dos numeros para multiplicar");
+            System.out.println("Numero 1");
+            int Mul = leer.nextInt();
+            System.out.println("Numero 2");
+            int Por = leer.nextInt();
+            int Res = 0;
+            System.out.println("La multiplicacion de: " + Mul + " por: " + Por + " Es: " + Multiplicacion(Mul, Por, Res));
+        }
         //POTENCIACION
-
-        System.out.println("Dijite La Base de la potenciacion:");
-        System.out.println("Base: ");
-        int Base = leer.nextInt();
-        System.out.println("Potencia: ");
-        int Potencia = leer.nextInt();
-        int Pot = Base;
-        System.out.println("El resultado de : "+Base+ " a la potencia de "+Potencia+ " Es igual a: "+Potenciacion(Base,Potencia,Pot));
-
+        if(Respuesta==3) {
+            System.out.println("Dijite La Base de la potenciacion:");
+            System.out.println("Base: ");
+            int Base = leer.nextInt();
+            System.out.println("Potencia: ");
+            int Potencia = leer.nextInt();
+            System.out.println("El resultado de : " + Base + " a la potencia de " + Potencia + " Es igual a: " + Potenciacion(Base, Potencia, Base));
+        }
         //FACTORIAL
-
-        System.out.println("Dijite un un numero para sacarle factorial");
-        System.out.println("Numero: ");
-        int Num = leer.nextInt();
-        int Sex = 1;
-        int Fac = Num-1;
-        System.out.println("El factorial de: "+Num+ " Es: "+Factorial(Num,Sex,Fac));
-
+        if(Respuesta==4) {
+            System.out.println("Dijite un un numero para sacarle factorial");
+            System.out.println("Numero: ");
+            int Num = leer.nextInt();
+            int Sex = 1;
+            int Fac = Num - 1;
+            System.out.println("El factorial de: " + Num + " Es: " + Factorial(Num, Sex, Fac));
+        }
         //AREA DE UN CUADRADO
-
-        System.out.println("Dijite el Lado de un cuadrado para sacar si area");
-        System.out.println("LADO:");
-        int Lado = leer.nextInt();
-        int area = 0 ;
-        System.out.println("El area del cuadrado es: "+Area(Lado,area));
-
+        if(Respuesta==5) {
+            System.out.println("Dijite el Lado de un cuadrado para sacar si area");
+            System.out.println("LADO:");
+            int Lado = leer.nextInt();
+            int area = 0;
+            System.out.println("El area del cuadrado es: " + Area(Lado, area));
+        }
         //AREA DE UN CIRCULO
-
-        System.out.println("De el Radio de un circulo para calcular su AREA");
-        System.out.println("RADIO");
-        double Rad = leer.nextInt();
-        double AREAR = 0 ;
-        System.out.println("El area del circulo es: "+AREA_2(Rad,AREAR));
-
+        if(Respuesta==6) {
+            System.out.println("De el Radio de un circulo para calcular su AREA");
+            System.out.println("RADIO");
+            double Rad = leer.nextInt();
+            double AREAR = 0;
+            System.out.println("El area del circulo es: " + AREA_2(Rad, AREAR));
+        }
         //VOLUMEN DE UN CONO
-
-        System.out.println("Dijite la altura y le radio de un Cono para Calcular su VOLUMEN");
-        System.out.println("RADIO:");
-        double Tad = leer.nextDouble();
-        System.out.println("ALTURA:");
-        int h = leer.nextInt();
-        double NANI = 0 ;
-        int DIV = 3 ;
-        System.out.println("El Volumen de el Cono es: "+areacono(Tad,h,NANI,DIV));
-
+        if(Respuesta==7) {
+            System.out.println("Dijite la altura y le radio de un Cono para Calcular su VOLUMEN");
+            System.out.println("RADIO:");
+            double Tad = leer.nextDouble();
+            System.out.println("ALTURA:");
+            int h = leer.nextInt();
+            double NANI = 0;
+            int DIV = 3;
+            System.out.println("El Volumen de el Cono es: " + areacono(Tad, h, NANI, DIV));
+        }
         //SERIE DE FIBONACCI
-
-        System.out.println("Dijite El numero al cual quiere hacer la serie de fibonacci");
-        System.out.println("NUMERO:");
-        int n = leer.nextInt();
-        System.out.println("Los primeros " + n + " números de la serie de Fibonacci son:");
-        mostrarSerieFibonacci(n);
-
+        if(Respuesta==8) {
+            System.out.println("Dijite El numero al cual quiere hacer la serie de fibonacci");
+            System.out.println("NUMERO:");
+            int n = leer.nextInt();
+            System.out.println("Los primeros " + n + " números de la serie de Fibonacci son:");
+            mostrarSerieFibonacci(n);
+        }
     }
 
     //FUNCION SUMA
@@ -159,14 +160,16 @@ public class Funciones_2{
     //FUNCION MENU
 
     public static void MENU() {
-        System.out.println(" 1. Sumar 2 numeros\n" +
-                "    2. Multiplicar 2 numeros con las sumas del 1\n" +
-                "    3. Potenciar 2 numeros con las sumas del 1\n" +
-                "    4. Calcular el factorial de 1 numero\n" +
-                "    5. Calcular el area de un cuadrado(recibiendo un lado)\n" +
-                "    6. Calcular el area de un circulo(recibiendo el radio)\n" +
-                "    7. Calcular el volumen de un cono(recibiendo el radio y la altura\n" +
-                "    8. Mostrar los n numeros de la serie de fibonacci(recibiendo n)\n");
+        System.out.println("""
+                 1. Sumar 2 numeros
+                    2. Multiplicar 2 numeros con las sumas del 1
+                    3. Potenciar 2 numeros con las sumas del 1
+                    4. Calcular el factorial de 1 numero
+                    5. Calcular el area de un cuadrado(recibiendo un lado)
+                    6. Calcular el area de un circulo(recibiendo el radio)
+                    7. Calcular el volumen de un cono(recibiendo el radio y la altura
+                    8. Mostrar los n numeros de la serie de fibonacci(recibiendo n)
+                """);
     }
 
 
