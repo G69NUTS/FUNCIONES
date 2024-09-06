@@ -9,7 +9,7 @@ public class Funciones_2{
 
         System.out.println("Muy buenas DIAS/TARDES que desea hacer:");
         MENU();
-        System.out.println("Dijita tu opcion: ");
+        System.out.println("Digita tu opcion: ");
         int Respuesta = leer.nextInt();
 
         //SUMA
@@ -84,7 +84,37 @@ public class Funciones_2{
             System.out.println("Los primeros " + n + " números de la serie de Fibonacci son:");
             mostrarSerieFibonacci(n);
         }
+        //ARREGLOS SUMAS
+
+        if(Respuesta==9){
+            System.out.println("Digite la cantidad de numeros que quiere sumar");
+            System.out.println("Numeros:");
+            int Tamano = leer.nextInt();
+            int Total =0;
+            int [] arreglo = new int[Tamano];
+            for(int i=0;i<arreglo.length;i++){
+                System.out.println("Digite los numeros");
+                arreglo [i] = leer.nextInt();
+            }
+            System.out.println(sumaArreglos(arreglo,Total));
+        }
+        //ARREGLOS MENOR MAYOR
+
+        if(Respuesta==10){
+            System.out.println("Dijite la cantidad de numeros que quiere comparar");
+
+        }
+
+
+
+
+
+
+
+
     }
+
+
 
     //FUNCION SUMA
 
@@ -169,9 +199,29 @@ public class Funciones_2{
                     6. Calcular el area de un circulo(recibiendo el radio)
                     7. Calcular el volumen de un cono(recibiendo el radio y la altura
                     8. Mostrar los n numeros de la serie de fibonacci(recibiendo n)
+                    9. Sumar la cantidad de numeros que usted quiera
                 """);
     }
 
+    //FUNCION SUMA ARREGLOS
+
+    public static int sumaArreglos(int[] arreglo,int Total){
+
+        for (int i=0;i<arreglo.length;i++){
+
+            Total += arreglo[i];
+
+        }
+
+        return Total;
+    }
+
+
+
+
+        //Principios SOLID
+        //NOTA IMPORTANTE PARA UNAS SEMANAS: [I@85ede7b
+        //
 
 
 
