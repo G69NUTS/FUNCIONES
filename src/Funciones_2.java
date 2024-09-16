@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Funciones_2{
@@ -114,16 +115,30 @@ public class Funciones_2{
 
             if(Respuesta == 11){
                 System.out.println("Ingrese porfavor los numeros que quiere multiplicar");
-                int[][] Matriz1 = new int[4][4];
+                int[][] Matri1 = new int[4][4];
                 int[][] Matriz2 = new int[4][4];
-                for(int i = 0; i < 8;i++) {
-                    System.out.println("Numero: ");
-                    Matriz1[i][i]= leer.nextInt();
+                int[][] MatrizResultado = new int[4][4];
+
+                for(int i = 0; i < Matri1.length;i++) {
+                    for (int j = 0; j < Matri1.length; j++) {
+                        System.out.println("Numero: ");
+                        Matri1[i][j] = leer.nextInt();
+                    }
+                    System.out.println();
                 }
-                for(int i = 0; i < 8;i++) {
-                    System.out.println("Numero: ");
-                    Matriz2[i][i]= leer.nextInt();
+                System.out.println("Segunda Matriz");
+                for(int i = 0; i < Matriz2.length;i++) {
+                    for (int j = 0; j < Matriz2.length; j++) {
+                        System.out.println("Numero: ");
+                        Matriz2[i][j] = leer.nextInt();
+                    }
+                    System.out.println();
                 }
+
+                System.out.println(Arrays.deepToString(multiplicacionMatrices(Matri1, Matriz2, MatrizResultado)));
+
+
+
 
 
             }
@@ -239,6 +254,8 @@ public class Funciones_2{
                     7. Calcular el volumen de un cono(recibiendo el radio y la altura
                     8. Mostrar los n numeros de la serie de fibonacci(recibiendo n)
                     9. Sumar la cantidad de numeros que usted quiera
+                    10.Encontrar Mayor Menor 
+                    11.Multiplicacion de Matricez 4x4
                 """);
     }
 
@@ -331,9 +348,19 @@ public class Funciones_2{
 
     //FUNCION MULTIPLICACION DE MATRICES
 
-    public static int multiplicacionMatrices(int[][]Matriz1){
+    public static int[][] multiplicacionMatrices(int[][] Matri1, int[][] Matriz2, int[][] MatrizResultado){
 
-    return Matriz1[2][3];
+        for (int i=0;i<Matri1.length;i++){
+            for (int j=0;j<Matriz2[0].length;j++){
+                MatrizResultado[i][j]= 0 ;
+                for (int k=0;k<Matri1[0].length;k++){
+                    MatrizResultado[i][j] += Matri1[i][k]*Matriz2[k][j];
+                }
+            }
+        }
+
+    return MatrizResultado;
+    
     }
 
         //Principios SOLID
